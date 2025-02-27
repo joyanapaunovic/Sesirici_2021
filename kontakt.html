@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- link tag -->
+    <!-- bootstrap include css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Šeširići</title>
+</head>
+<body>
+<header class='container-fluid row'>
+        <!-- logo -->
+        <div id="logo" class='col-lg-4'>
+            <a class="navbar-brand" href="index.html">Šeširići</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light col-lg-4">
+            <!-- hamburger -->
+            <button class="navbar-toggler btn-hamburger" type="button" data-toggle="collapse" data-target="#navigacija" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src='assets/img/hamburger.png' alt='hamburger menu' />
+            </button>
+            <!-- navigacija -->
+            <div class="collapse navbar-collapse" id="navigacija">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galerija.html">Galerija</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.html">Kontakt</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+            <!-- ikonice, prijava, korpa -->
+            <div id="info" class='col-lg-4 d-flex flex-row justify-content-between'>
+                <div id="drustvene-mreze">
+               <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+               </a> 
+               <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+               </a> 
+               <a href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i>
+               </a> 
+               <a href="https://www.pinterest.com/" target="_blank">
+                  <i class="fab fa-pinterest-p"></i>
+               </a> 
+
+                </div>
+                <div id="prijava-i-korpa" class='d-flex flex-row flex-wrap justify-content-around'>
+                    <i class="far fa-user-circle mx-2"></i> 
+                    <span><a href="#" data-toggle='modal' data-target='#prijavi-se'>Prijavi se</a></span>
+                  
+                    <div id="korpa" class='mx-3'>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+              
+
+               </div>
+
+               <!-- Modal bootstrap - prijavi se -->
+      <div class="modal fade" id="prijavi-se" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="prijavi-se" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Prijava</h5>
+                        <button type="button" class='btn-close btn-x' data-dismiss="modal" aria-label="Close">
+                            <img src='assets/img/close.png'  alt='Close button' />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="korisnicko-ime" class="col-form-label">Korisničko ime</label>
+                            <input type="text" class="form-control" id="korisnicko-ime" name='korisnickoName' />
+                        </div>
+                        <div class="mb-3">
+                            <label for="lozinka-prijava" class="col-form-label">Vaša lozinka</label>
+                            <input type='password' class="form-control" id="lozinka-prijava" name='lozinkaPrijava' />
+                        </div>
+                        </form>
+                    </div>
+                        <div class="modal-footer">
+                            <input type="button" value='Potvrdi' id='potvrdiBtn' name='potvrdiName' class='dizajn-dugme' />
+                            <input type="button" value='Poništi' data-dismiss="modal" aria-label="Close"  id='ponistiBtn' name='ponistiName' class='dizajn-dugme' />
+                        </div>
+                        <span class='p-3'>Nemate nalog? <a href='#' class='registracija-link'>Registrujte se</a></span>
+                    </div>
+    </header>
+
+<!-- kontakt -->
+<div class="container-fluid mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">E-mail adresa</label>
+                        <input type="text" class="form-control" id="email" name='email' />
+                    </div>
+                    <div class="mb-3">
+                        <label for="lozinka-prijava" class="col-form-label">Vaše ime i prezime</label>
+                        <input type='text' class="form-control" id="lozinka-prijava" name='imePrezime' />
+                    </div>
+                    <div class="mb-3">
+                        <label for="poruka">Ostavite poruku</label>
+                        <textarea name="poruka" id="poruka" class="form-control" cols="30"></textarea>
+                    </div>
+                    <input type="button" value='Potvrdi' id='potvrdiBtn' name='potvrdiName' class='dizajn-dugme mb-5 ' />
+                    </form>
+            </div>
+            <div class="col-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.3353986281045!2d20.482096975989837!3d44.81473137107077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a95dfdba1fb%3A0x7dd3ed9b437a11d6!2sZdravka%20%C4%8Celara%2016%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1740668927007!5m2!1sen!2srs"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- footer => drustvene mreze -->
+                <div id="drustvene-mreze-footer" class='m-auto my-5'>
+                        <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                        </a> 
+                        <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                        </a> 
+                        <a href="https://twitter.com/" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                        </a> 
+                        <a href="https://www.pinterest.com/" target="_blank">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a> 
+                </div>
+                <div id="informacije" class="d-flex flex-row justify-content-center flex-wrap">
+                
+                     <!-- footer => kontakt -->
+                     <div id="kontakt" class="col-lg-4 d-flex flex-column">
+                        <h3 class='naslov-footer my-2'> Kontakt</h3>
+
+                        <span class='kontaktFooter'><i class="far fa-envelope"></i> <a class='aLink' href='mailto:sesirici@gmail.com'>sesirici&#64;gmail&#46;com</a></span>
+                        <span  class='kontaktFooter'><i class="fas fa-phone"></i> <a class='aLink' href="tel:+381 61-176-9801">+381 61-176-9801</a></span>
+                        <span class="kontaktFooter"><i class="fas fa-map-marker-alt"></i> <a class='aLink' href="https://www.google.com/maps/place/Zdravka+%C4%8Celara+16,+Beograd+11000/data=!4m2!3m1!1s0x475a7a95dfdba1fb:0x7dd3ed9b437a11d6?sa=X&ved=1t:242&ictx=111" target="_blank">Zdravka Čelara 16, Beograd</a></span>
+                    </div>
+                <ul id='vazni-linkovi' class='col-lg-4 d-flex flex-column'>
+                    <!-- footer => uslovi -->
+                    <h3 class='naslov-footer my-2'> Uslovi korišćenja</h3>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#tekst-nacin-placanja">
+                                Načini plaćanja
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#tekst-uslovi">
+                                Uslovi korišćenja
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#tekst-politika-privatnosti">
+                                Politika privatnosti
+                            </a>
+                        </li>
+                </ul>
+                <!-- MODALS bootstrap -->
+                <!-- Modal - nacini placanja -->
+                <div class="modal fade" id="tekst-nacin-placanja" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="tekst-nacin-placanja" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Načini plaćanja</h5>
+                        <button type="button" class='btn-close btn-x' data-dismiss="modal" aria-label="Close">
+                            <img src='assets/img/close.png'  alt='Close button' />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                        <p>Poštovani potrošači,</p>
+                        molimo Vas da pažljivo pročitate uslove korišćenja pre upotrebe internet sajta. 
+                        Korišćenjem naše internet prodavnice potvrđujete da ste pročitali, razumeli i prihvatili ove uslove korišćenja.
+                        "Šeširići" zadržava pravo da u bilo kom trenutku izmeni Uslove unošenjem izmena u ovaj tekst.
+                        Predlažemo da pre svake kupovine proverite da li je došlo do izmena u uslovima korišćenja.
+                        <p>
+                            <p class='font-weight-bold'>Uplatnica</p>
+                            Plaćanje uplatnicom podrazumeva da svoju porudžbinu
+                            možete platiti direktnom uplatom u bilo kojoj pošti ili banci. 
+                            Detaljne podatke koje je potrebno navesti na uplatnici dobijate putem e-maila neposredno nakon potvrde 
+                            porudžbine od strane naših komercijalista. Po evidentiranju Vaše uplate, šešir se šalje na izabranu adresu isporuke.
+                        </p>
+                        <p>
+                            <p class='font-weight-bold'>Nalog za prenos</p>
+                            Ukoliko ste pravno lice ili korisnik elektronskog bankarstva (e-banking-a), 
+                            uplatu možete izvršiti prenosom sredstava sa Vašeg računa. 
+                            Detaljne podatke koje je potrebno navesti na nalogu za prenos dobijate putem e-mail-a 
+                            od strane naših komercijalista neposredno nakon potvrde porudžbine. 
+                            Po evidentiranju Vaše uplate, roba se šalje na izabranu adresu isporuke.
+                        </p>
+                        <p>
+                            <p class='font-weight-bold'>Gotovinski (pouzećem)</p>
+                            Nudimo Vam i opciju plaćanja pouzećem (gotovinsko plaćanje kuriru na adresi isporuke). 
+                            U ovom slučaju nakon potvrde porudžbine, šešić će Vam biti poslat kurirskom službom, 
+                            a Vi ćete je platiti kuriru pri preuzimanju. 
+                            Za porudžbine čiji je iznos 2000 dinara ili veći, "Šeširići" Vam pruža besplatnu isporuku robe na teritoriji cele Srbije. 
+                            Ukoliko je vrednost porudžbine manja od 2000 dinara, cena isporuke će iznositi 240 dinara uključujući PDV.
+                        </p>
+                        <p>
+                            <p class='font-weight-bold'>Platna kartica</p>
+                            Svoju porudžbinu možete platiti koristeći Maestro, MasterCard, VISA ili DINA karticu. 
+                            Kartica mora biti odobrena od strane banke izdavaoca za online (Internet) plaćanje.
+                            Prilikom online naručivanja, odabirom odgovarajućeg načina plaćanja bićete preusmereni
+                            na stranicu WSPay koja je zaštićena i sigurna za ovakav način plaćanja. Niti jednog trenutka
+                            podaci o Vašoj platnoj kartici nisu dostupni našem sistemu.
+                            <div>
+                                <img src="assets/img/kartice.png" alt="Platne kartice" />
+                            </div>
+                        </p>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Modal - uslovi koriscenja -->
+                
+                <div class="modal fade" id="tekst-uslovi" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="tekst-uslovi" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Uslovi korišćenja</h5>
+                        <button type="button" class='btn-close btn-x' data-dismiss="modal" aria-label="Close">
+                            <img src='assets/img/close.png'  alt='Close button' />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                        <p>Kada koritite naš internet sajt nije dozvoljeno da:</p>
+                    <p>
+                    <ol class='text-align-center p-3'>
+                            <li>
+                            Ometate ili onemogućavate bilo koje funkcije povezane sa sigurnošću na sajtu ili funkcije koje sprečavaju 
+                            ili ograničavaju upotrebu ili kopiranje dotupnog sadržaja
+                            </li>
+                            <li>
+                            Objavljujete ili prenosite na internet sajt svaki materijal koji je preteći, nepristojan, uvredljiv, pornografski ili zlostavljački. Takođe materijal kojim možete inicirati rasnu mržnju, uzrokujete uznemiravanje ili bilo koje neprijatnosti usled kršenja privatnosti,
+                            poverenja određenim diskriminacionim, pretećim ili izazivačkim komentarima.
+                            </li>
+                            <li>
+                            Dajete netačne informacije koje se tiču ličnih podataka u vašem profilu
+                            </li>
+                            <li>
+                            Koristite tuđe lične podatke bez dozvole te osobe ili lažno predstavljate da istupate u ime trećeg lica, firme ili organizacije
+                            </li>
+                            <li>
+                            Bavite se bilo kojim nezakonitim ili protivpravnim ponašanjem
+                            </li>
+                            <li>
+                            Modifikujete, ometate, presrećete ili hakujete internet sajt u cilju njegovog onesposobljavanja
+                            </li>
+                            <li>
+                            Koristite specijalizovane programe radi preuzimanja sadržaja sa sajta
+                            </li>
+                        </ol>
+                        <p class='indent'>Ako prekršite bilo koji od ovih Uslova mi Vas možemo sprečiti da koristite ovaj internet sajt na stalnom ili privremenom nivou. 
+                            Mi možemo preduzeti i druge mere, uključujući,
+                            ali ne ograničavajući se na to da Vas prijavimo nadležnim državnim organima, pošaljemo upozorenje ili podnesemo tužbu.</p>
+                    </p>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Modal - politika privatnosti -->
+                <div class="modal fade" id="tekst-politika-privatnosti" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="tekst-politika-privatnosti" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Politika privatnosti</h5>
+                        <button type="button" class='btn-close btn-x' data-dismiss="modal" aria-label="Close">
+                            <img src='assets/img/close.png'  alt='Close button' />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class='indent'>
+                        Podacima o ličnosti smatraju se oni podaci koji otkrivaju Vaš identitet, npr. Vaše ime i prezime, adresa, broj telefona ili e-mail. 
+                        "Šeširići" ne prikuplja podatke o ličnosti bez vaše dozvole tj. 
+                        ukoliko vi niste voljni da nam ih date npr. kada poručujete proizvod ili se prijavljujete za newsletter.
+                        <p>
+                            <p class='font-weight-bold'>U toku kupovine , možemo Vam zatražiti Vaše lične informacije. To se može desiti u sledećim slučajevima:</p>
+                            <ol class="p-3">
+                                <li>
+                                Prilikom online registracije korisničkog naloga;
+                                </li>
+                                <li>
+                                Pri kupovini proizvoda;
+                                </li>
+                                <li>
+                                Korišćenjem nekog servisa ili usluge;
+                                </li>
+                                <li>
+                                Pri dostavi;
+                                </li>
+                                <li>
+                                Učestvovanjem u nagradnim igrama, poklonima, anketama i istraživanjima;
+                                </li>
+                                <li>
+                                Uspostavljanjem kontakta preko internet stranica;
+                                </li>
+                            </ol>
+                        </p>
+
+                        <p class='indent'>
+                        Prihvatanjem ovih Uslova dajete izričit pristanak 
+                        tj. saglasnost da "Šeširići", povezana lica i njeni poslovni partneri, 
+                        prikupljaju, obrađuju, 
+                        te međusobno prosleđuju i razmenjuju podatke navedene u porudžbenici, 
+                        kao i podatke o porudžbinama u svrhu brige o kupcima i marketinga, 
+                        rešavanja reklamacija, kao i praćenja preferencija — potreba potrošača, 
+                        kako bi "Šeširići" ocenila da li ste zadovoljni kvalitetom 
+                        pruženih usluga i proizvoda. 
+                        Sve posredovane informacije su sigurne, nećemo ih ni pod kojim uslovima zloupotrebiti 
+                        niti prodavati na tržištu, što Vam osigurava potpuno sigurno i bezbedno poslovanje i saradnju 
+                        sa "Šeširići". Svi zaposleni naše Internet prodavnice (i poslovni partneri) 
+                        odgovorni su za poštovanje načela zaštite privatnosti.
+                        </p>
+                        </p>
+                        <p class="font-weight-bold p-2">
+                        Prihvatanjem ovih Uslova potvrđujete da ste upoznati sa sa pravom da u svakom trenutku možete u celini povući ovu izjavu o saglasnosti.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- END MODALS -->
+
+                <!-- footer => drugi linkovi(dokumentacija i autor) -->
+                <div id="linkovi-footer" class='col-lg-2 d-flex flex-column'>
+                        <h3 class='naslov-footer my-2'> Drugi linkovi</h3>
+                        <ul>
+                        <li>
+                            <a href="#" data-toggle='modal' data-target="#autor">Autor</a>
+                        </li>
+                        <!-- Modal - autor -->
+                        <div class="modal fade" id="autor" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="autor" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Autor</h5>
+                        <button type="button" class='btn-close btn-x' data-dismiss="modal" aria-label="Close">
+                            <img src='assets/img/close.png'  alt='Close button' />
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       <p>
+                           <p>Autor: Jovana Paunović, 94/19</p>
+                       </p>
+                        
+                    </div>
+                    </div>
+                </div>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+<div class="container-fluid" id="nakon-footera">
+    <div class="row">
+        <span id='copyright' class='col-lg-12'> &#169; Šeširići 2021</span>
+    </div>
+    
+</div>
+
+<!-- scripts -->
+<!-- boostrap js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="assets/js/main.js" type='text/javascript'></script>
+</body>
+</html>
